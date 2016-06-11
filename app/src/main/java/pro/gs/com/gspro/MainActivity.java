@@ -38,7 +38,8 @@ public class MainActivity extends AppCompatActivity {
         //自己紹介を表示
         int my_age = 35;
         TextView intructionView = (TextView) findViewById(R.id.intruction);
-        intructionView.setText(myGreeting(fullname,my_age));
+        String self_intruduction = myGreeting(fullname,my_age);
+        intructionView.setText(self_intruduction);
 
 
         //平均を表示(何の平均かは、とりあえず置いといて・・・)
@@ -57,8 +58,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
-
 
 
     /**
