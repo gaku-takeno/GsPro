@@ -16,7 +16,7 @@
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="fitXY"
+                android:scaleType="centerCrop"
                 android:src="@drawable/cover_icon"
                 />
 
@@ -33,7 +33,7 @@
                     android:id="@+id/gs"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:src="@drawable/my_icon"
+                    android:src="@drawable/nobunaga"
                     android:scaleType="centerCrop"
                     android:layout_margin="10dp"
                     android:background="@drawable/border"
@@ -75,14 +75,15 @@
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:background="@color/red_2"
-                    android:text="国籍" />
+                    android:text="@string/nationality"
+                    />
                 <Button
                     android:id="@+id/sex"
                     android:layout_width="0dp"
                     android:layout_weight="2"
                     android:layout_height="match_parent"
                     android:background="@color/yellow_1"
-                    android:text="性別" />
+                    android:text="@string/sex" />
 
                 <ImageButton
                     android:layout_width="0dp"
@@ -131,18 +132,21 @@
                 android:id="@+id/date1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 />
 
             <TextView
                 android:id="@+id/date2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 />
 
             <TextView
                 android:id="@+id/average"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="5dp"
                 />
 
 

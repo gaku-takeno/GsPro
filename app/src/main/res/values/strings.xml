@@ -3,6 +3,9 @@
 
     <string name="address">住所</string>
     <string name="email">EMAIL</string>
+    <string name="sex">性別</string>
+    <string name="nationality">国籍</string>
+
     <string name="tel">090-0000-0000</string>
     <string name="user_name1">織田信長</string>
     <string name="user_name2">豊臣秀吉</string>

@@ -22,16 +22,16 @@ public class MainActivity extends AppCompatActivity {
 
         //東京日時を表示
         String tzTK = getLocalTime("Asia/Tokyo");
-        date1View.setText("東京:"+tzTK);
+        date1View.setText("東京時間:\n"+tzTK);
 
         //ニューヨーク時間を表示
         String tzNY = getLocalTime("America/New_York");
-        date2View.setText("ニューヨーク:"+tzNY);
+        date2View.setText("ニューヨーク時間:\n"+tzNY);
 
 
         //自分の名前を表示
         TextView nameView = (TextView) findViewById(R.id.name);
-        String fullname = "伊藤 浩司";
+        String fullname = "織田 信長";
         nameView.setText(fullname);
 
 
