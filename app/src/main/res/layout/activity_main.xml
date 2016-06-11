@@ -1,0 +1,258 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroller"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/date1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/date2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/average"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+
+        </LinearLayout>
+
+
+        <!-- 上半分 start -->
+        <RelativeLayout
+            android:layout_height="200dp"
+            android:layout_width="match_parent"
+            android:background="@color/blue_1"
+            >
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/cover_icon"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:id="@+id/gs"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/my_icon"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/border"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/name"
+                    android:text=""
+                    android:textSize="30dp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_vertical"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <!-- 上半分 end -->
+
+
+
+        <!-- 下半分 start -->
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_height="40dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:background="@color/red_1"
+                >
+                <Button
+                    android:id="@+id/nation"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@color/red_2"
+                    android:text="国籍" />
+                <Button
+                    android:id="@+id/sex"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:background="@color/yellow_1"
+                    android:text="性別" />
+
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:src="@android:drawable/ic_menu_share"
+                    android:textSize="10dp"
+                    android:background="@color/yellow_2"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/clip_mark"
+                    android:padding="5dp"
+                    />
+                <TextView
+                    android:id="@+id/intruction"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="@string/email"
+                    android:textSize="15dp"
+                    android:gravity="center|left"
+                    android:padding="5dp"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="40dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:layout_marginTop="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/friends_list"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_height="100dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <ImageView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:src="@drawable/user_icon"
+                        android:padding="5dp"
+                        />
+                    <TextView
+                        android:id="@+id/friend_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/user_name1"
+                        android:layout_gravity="center"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <ImageView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:src="@drawable/user_icon"
+                        android:padding="5dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/user_name2"
+                        android:layout_gravity="center"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
+                    <ImageView
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:src="@drawable/user_icon"
+                        android:padding="5dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/user_name3"
+                        android:layout_gravity="center"
+                        />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <!-- 下半分 end -->
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/GsPro/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/GsPro/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.4.0_ee3f41baf58c8ab039e0b5292e9943b2dd454ba8/classes.dex" />
+    </item>
+    <item
+        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/GsPro/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/GsPro/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_90d6225dcd381983f7bd4f594bc348e13d3f8753/classes.dex" />
+    </item>
+    <item
+        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/GsPro/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/GsPro/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_0158ae2738578b7d01a57026dc7171e0d18db5ee/classes.dex" />
+    </item>
+    <item
+        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/GsPro/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="b7ff89eb56de17877d7754e3bf6f46e12b1906e8">
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/GsPro/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_dbb4d1dabc20f5ce2f11801411f09488e4687103/classes.dex" />
+    </item>
+    <item
+        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/GsPro/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="808dd92389fc2b330c57e177082d514b3052812a">
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/GsPro/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_cb1e14c7637c5453f09087948d996f0f17b638d6/classes.dex" />
+    </item>
+    <item
+        jar="/Users/takenogaku/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/GsPro/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_a19e272300223424f6aa65f6bd5a1e10d48aa996/classes.dex" />
+    </item>
+    <item
+        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/GsPro/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/GsPro/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_f20668954244120061540b98f2981def010585f5/classes.dex" />
+    </item>
+    <item
+        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/GsPro/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/GsPro/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_5aa58d52167c1f3152e5b5ac26348f05381bf98e/classes.dex" />
+    </item>
+
+</items>
