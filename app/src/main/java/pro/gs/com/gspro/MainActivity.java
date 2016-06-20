@@ -26,7 +26,29 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
+        MySelf mySelf = new MySelf(this);
+
+
+        //アップキャスト
+        Human human = mySelf;
+
+        Human human1 = new Human();
+
+        //ダウンキャスト
+        mySelf = (MySelf) human1;
+
+
+        trans();
+
+
+
+    }
+
+    private void trans () {
+
+
         TextView btnView = (TextView) findViewById(R.id.btn);
+
 
 
 //        Context context = getApplicationContext();
@@ -39,19 +61,19 @@ public class MainActivity extends AppCompatActivity {
 
         if (btnView != null) {
 
-        // クリック時の処理
-        final Context finalContext = this;
-        btnView.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                //ここに処理を書く
-                // 第3引数は、表示期間（LENGTH_SHORT、または、LENGTH_LONG）
+            // クリック時の処理
+            final Context finalContext = this;
+            btnView.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    //ここに処理を書く
+                    // 第3引数は、表示期間（LENGTH_SHORT、または、LENGTH_LONG）
 //                Toast.makeText(getApplication(), "ボタンが押されました", Toast.LENGTH_LONG).show();
 
-                Intent intent = new Intent(finalContext, SubActivity.class);
-                startActivity(intent);
+                    Intent intent = new Intent(finalContext, SubActivity.class);
+                    startActivity(intent);
 
                 }
-        });
+            });
         }
 
         //以下のような書き方も出来る。
@@ -63,10 +85,7 @@ public class MainActivity extends AppCompatActivity {
         //        //
         // クリック時の処理
         //        greetingView.setOnClickListener(myClickListner);
-
-
     }
-
 
 
 }
