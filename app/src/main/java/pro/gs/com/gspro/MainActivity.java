@@ -1,157 +1,108 @@
 package pro.gs.com.gspro;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import java.text.DateFormatSymbols;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.TimeZone;
+import pro.gs.com.gspro.R;
 
 public class MainActivity extends AppCompatActivity {
+
+    //型がTextViewであるnameViewという名前の変数を宣言している。
+    //この時点では、nameViewには何も入っていない。つまりNULL
+    private TextView greetingView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView date1View = (TextView) findViewById(R.id.date1);
-        TextView date2View = (TextView) findViewById(R.id.date2);
+        //viewオブジェクトを取り出して、メンバー変数に格納する。
+        greetingView = (TextView) findViewById(R.id.greeting);
+        TextView greetingView2 = greetingView;
 
-        //東京日時を表示
-        String tzTK = getLocalTime("Asia/Tokyo");
-        date1View.setText("東京時間:\n"+tzTK);
+        greetingView.setText("wここをクリックして挨拶する!");
 
-        //ニューヨーク時間を表示
-        String tzNY = getLocalTime("America/New_York");
-        date2View.setText("ニューヨーク時間:\n"+tzNY);
+        greetingView.setText("クリックして自分を創ってみる!");
 
-
-        //自分の名前を表示
-        TextView nameView = (TextView) findViewById(R.id.name);
-        String fullname = "織田 信長";
-        nameView.setText(fullname);
-
-
-        //自己紹介を表示
-        int my_age = 35;
-        TextView intructionView = (TextView) findViewById(R.id.intruction);
-        String self_intruduction = myGreeting(fullname,my_age);
-        intructionView.setText(self_intruduction);
-
-
-        //平均を表示(何の平均かは、とりあえず置いといて・・・)
-        TextView averageView = (TextView) findViewById(R.id.average);
-        int[] intArg = new int[3];
-        intArg[0] = 2;
-        intArg[1] = 24;
-        intArg[2] = 33;
-        double avarage = myAverage(intArg);
-
-        //取り出した平均値を格納するaverage変数は少数型でdouble
-        //このままでは、平均値の少数点以下が無数に表示されうる。
-        //少数第2位まで表示する。
-        String averageVal = String.format("%.2f", avarage);
-        averageView.setText("平均得点（平均値）:"+averageVal);
-
+        //アクション（インテントに画面遷移の処理）を実装
+        setActions();
 
     }
 
 
-    /**
-     * 四捨五入をする
-     * @param number
-     * @return
-     */
-    public int myRound (double number) {
-        int value = (int) Math.round(number);
-        return value;
+    private void setActions(){
+
+        // クリック時の処理
+        greetingView.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                intentTrans();
+            }
+        });
+
+        //以下のような書き方も出来る。
+//        View.OnClickListener myClickListner = new View.OnClickListener() {
+//            public void onClick(View v) {
+//                intentTrans();
+//            }
+//        };
+//        // クリック時の処理
+//        greetingView.setOnClickListener(myClickListner);
+
+
     }
 
-
-    /**
-     * 10の倍数
-     * @param number
-     * @return
-     */
-    public int myBaisu(int number) {
-        int value = number * 10;
-        return value;
-    }
+    private void intentTrans () {
 
 
-    /**
-     * 平均値
-     * @param intArg
-     * @return
-     */
-    public double myAverage(int[] intArg) {
-        int total = 0;
-        for ( int i = 0;i<intArg.length;i++) {
-            total += intArg[i];
+        EditText firstNameView = (EditText) findViewById(R.id.firstname);
+        EditText familyNameView = (EditText) findViewById(R.id.familyname);
+
+        EditText ageView = (EditText) findViewById(R.id.age);
+
+        String firstname = firstNameView.getText().toString();
+        String familyname = familyNameView.getText().toString();
+        String ageTxt = ageView.getText().toString();
+        int age = Integer.parseInt(ageTxt);
+
+        //1:男 0:女
+        int sex = 1;
+
+        // ラジオグループのオブジェクトを取得
+        RadioGroup rg = (RadioGroup)findViewById(R.id.radiogroup_sex);
+        // チェックされているラジオボタンの ID を取得
+        RadioButton radio_male = (RadioButton)findViewById(R.id.radio_male);
+//        RadioButton radio_female = (RadioButton)findViewById(R.id.radio_female);
+        if(radio_male.isChecked()) {
+            sex = 1;
+        } else {
+            sex = 0;
         }
-        double average = (double)total / intArg.length;
-//        return myRound(average);
-        Log.d("hello_",average+"");
-        return average;
 
-    }
+        Log.d("hello_age",age+"");
+        if (!firstname.equals("") && !familyname.equals("")) {
 
+            Intent intent = new Intent(this, SubActivity.class);
+            intent.putExtra("first_name", firstname);
+            intent.putExtra("family_name", familyname);
+            intent.putExtra("sex",sex);
+            intent.putExtra("age",age);
+            startActivity(intent);
 
-    /**
-     * 名前に「様」をつける
-     * @param name
-     * @return
-     */
-    public String myKeisho (String name) {
-        name += "様";
-        return name;
-    }
+        } else {
 
+            // 第3引数は、表示期間（LENGTH_SHORT、または、LENGTH_LONG）
+            Toast.makeText(this, "名前と苗字を入れてください。", Toast.LENGTH_LONG).show();
 
-    /**
-     * 自己紹介文を作成する
-     * @param name
-     * @param age
-     * @return
-     */
-    public String myGreeting (String name,int age) {
-        String greeting = "こんにちは、私の名前は"+name+"と申します。";
-        greeting += "年齢は"+age+"歳です。";
-        return greeting;
-    }
+        }
 
-
-
-
-
-    /**
-     * ローカル日時を取得する
-     * @param timezone
-     * @return
-     */
-    public String getLocalTime (String timezone) {
-
-        String[] weekArg = new String[8];
-        weekArg[0] = "";
-        weekArg[1] = "日";
-        weekArg[2] = "月";
-        weekArg[3] = "火";
-        weekArg[4] = "水";
-        weekArg[5] = "木";
-        weekArg[6] = "金";
-        weekArg[7] = "土";
-
-        DateFormatSymbols dfs = DateFormatSymbols.getInstance();
-        dfs.setWeekdays(weekArg);
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd(EEEE) HH:mm",dfs);
-
-        TimeZone tz = TimeZone.getTimeZone(timezone);
-        sdf.setTimeZone(tz);
-
-        return sdf.format(new Date());
 
     }
 
