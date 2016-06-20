@@ -86,9 +86,9 @@ public class MainActivity extends AppCompatActivity {
             sex = 0;
         }
 
-        Log.d("hello_age",age+"");
         if (!firstname.equals("") && !familyname.equals("")) {
 
+            //ここでSubActivityへ画面遷移する。
             Intent intent = new Intent(this, SubActivity.class);
             intent.putExtra("first_name", firstname);
             intent.putExtra("family_name", familyname);
