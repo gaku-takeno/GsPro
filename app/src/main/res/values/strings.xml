@@ -1,19 +1,4 @@
 <resources>
-    <string name="app_name">GsPro</string>
-
-    <string name="address">住所</string>
-    <string name="email">EMAIL</string>
-    <string name="sex">性別</string>
-    <string name="nationality">国籍</string>
-
-    <string name="tel">090-0000-0000</string>
-    <string name="user_name1">織田信長</string>
-    <string name="user_name2">豊臣秀吉</string>
-    <string name="user_name3">徳川家康</string>
-    <string name="title_activity_edit_profile">プロフィール編集</string>
-    <string name="title_activity_new_profile">友達追加</string>
-    <string name="friends_list">友達リスト</string>
-
+    <string name="app_name">LessonAppGsPro</string>
     <string name="button">ボタン</string>
-
 </resources>

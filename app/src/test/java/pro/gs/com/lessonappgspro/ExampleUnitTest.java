@@ -1,4 +1,4 @@
-package pro.gs.com.gspro;
+package pro.gs.com.lessonappgspro;
 
 import org.junit.Test;
 

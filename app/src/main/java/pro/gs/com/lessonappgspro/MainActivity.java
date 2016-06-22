@@ -1,22 +1,12 @@
-package pro.gs.com.gspro;
+package pro.gs.com.lessonappgspro;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.text.DateFormatSymbols;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Objects;
-import java.util.TimeZone;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,15 +17,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         MySelf mySelf = new MySelf(this);
-
+//        Human human1 = new Human();
 
         //アップキャスト
         Human human = mySelf;
 
-        Human human1 = new Human();
-
         //ダウンキャスト
-        mySelf = (MySelf) human1;
+//        mySelf = (MySelf) human1;
 
 
         trans();
@@ -49,18 +37,21 @@ public class MainActivity extends AppCompatActivity {
 
         TextView btnView = (TextView) findViewById(R.id.btn);
 
+        View view = findViewById(R.id.btn);
 
+        Object obj= view;
 
 //        Context context = getApplicationContext();
+
 //        サブクラスからスーパークラスへの型変換は暗黙的に行われる
 //        context = this;
+
 
 //        スーパークラスからサブクラスへと型変換をするには明示的キャストが必要になる。
 //        Activity act = (Activity) context;
 
 
         if (btnView != null) {
-
             // クリック時の処理
             final Context finalContext = this;
             btnView.setOnClickListener(new View.OnClickListener() {
@@ -69,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                     // 第3引数は、表示期間（LENGTH_SHORT、または、LENGTH_LONG）
 //                Toast.makeText(getApplication(), "ボタンが押されました", Toast.LENGTH_LONG).show();
 
-                    Intent intent = new Intent(finalContext, SubActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), SubActivity.class);
                     startActivity(intent);
 
                 }
@@ -85,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
         //        //
         // クリック時の処理
         //        greetingView.setOnClickListener(myClickListner);
+
+
     }
 
 

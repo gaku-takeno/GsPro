@@ -1,13 +1,15 @@
-package pro.gs.com.gspro;
+package pro.gs.com.lessonappgspro;
+
+
 
 /**
  * Created by takenogaku on 2016/06/20.
  */
 public class Human {
 
-    int age;
+    private int age;
 
-    int sex;//1:男 0:女
+    private int sex;//1:男 0:女
 
 
     public Human () {

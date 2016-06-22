@@ -1,7 +1,6 @@
-package pro.gs.com.gspro;
+package pro.gs.com.lessonappgspro;
 
 import android.content.Context;
-
 
 
 public class MySelf extends Human{
@@ -31,15 +30,13 @@ public class MySelf extends Human{
             greeting += "私は"+this.name + "です。\n";
         }
 
-
-
-        greeting += this.age + "歳です。\n";
+        greeting += getAge() + "歳です。\n";
 
         if (this.hobby != null) {
             greeting += "趣味は"+this.hobby + "です。\n";
         }
 
-        if (this.sex == 1) {
+        if (getSex() == 1) {
             greeting += "男です。よろしく！！";
         } else {
             greeting += "女です。よろしくね〜";
