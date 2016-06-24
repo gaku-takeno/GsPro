@@ -18,10 +18,11 @@ public class SubActivity extends AppCompatActivity {
 
         //http://techbooster.org/android/ui/9039/
 
+        ListView lv = (ListView) findViewById(R.id.listView1);
+
         String[] members = { "mhidaka", "rongon_xp", "kacchi0516", "kobashinG",
                 "seit", "kei_i_t", "furusin_oriver" };
 
-        ListView lv = (ListView) findViewById(R.id.listView1);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_expandable_list_item_1, members);

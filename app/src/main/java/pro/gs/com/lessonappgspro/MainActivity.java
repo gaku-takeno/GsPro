@@ -1,5 +1,6 @@
 package pro.gs.com.lessonappgspro;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
 //        mySelf = (MySelf) human1;
 
 
+        Object obj = new Object();
+        human = (Human)obj;
+
+
         trans();
 
 
@@ -39,16 +44,8 @@ public class MainActivity extends AppCompatActivity {
 
         View view = findViewById(R.id.btn);
 
-        Object obj= view;
+//        Object obj= view;
 
-//        Context context = getApplicationContext();
-
-//        サブクラスからスーパークラスへの型変換は暗黙的に行われる
-//        context = this;
-
-
-//        スーパークラスからサブクラスへと型変換をするには明示的キャストが必要になる。
-//        Activity act = (Activity) context;
 
 
         if (btnView != null) {
@@ -60,8 +57,9 @@ public class MainActivity extends AppCompatActivity {
                     // 第3引数は、表示期間（LENGTH_SHORT、または、LENGTH_LONG）
 //                Toast.makeText(getApplication(), "ボタンが押されました", Toast.LENGTH_LONG).show();
 
-                    Intent intent = new Intent(getApplicationContext(), SubActivity.class);
-                    startActivity(intent);
+                    moveActivty();
+
+
 
                 }
             });
@@ -77,6 +75,35 @@ public class MainActivity extends AppCompatActivity {
         // クリック時の処理
         //        greetingView.setOnClickListener(myClickListner);
 
+
+    }
+
+
+    private void moveActivty () {
+
+        //http://individualmemo.blog104.fc2.com/blog-entry-41.html
+        //アプリ全体の状態を持っていて、何から起動されたかどういう状態か、何にアクセスしようとしているか、といった情報を受け渡す
+        Context context = getApplicationContext();
+
+//        サブクラスからスーパークラスへの型変換は暗黙的に行われる
+        context = this;
+
+
+//        サブクラスからスーパークラスへとアップキャスト。暗黙的にキャスト
+        Activity act = this;
+
+
+        act = (Activity) context;
+
+        MainActivity mainActivity = this;//キャストなし thisは元々 MainActivity
+
+        mainActivity = (MainActivity) getApplicationContext();//ContextからMainActivityへダウンキャスト
+
+//        final  MainActivity act = this;
+
+        Context con = this;
+        Intent intent = new Intent(getApplicationContext(), SubActivity.class);
+        startActivity(intent);
 
     }
 
