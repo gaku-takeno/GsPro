@@ -20,8 +20,13 @@ public class SubActivity extends AppCompatActivity {
 
         ListView lv = (ListView) findViewById(R.id.listView1);
 
-        String[] members = { "mhidaka", "rongon_xp", "kacchi0516", "kobashinG",
-                "seit", "kei_i_t", "furusin_oriver" };
+        String[] members = {
+                "mhidaka",
+                "rongon_xp",
+                "kacchi0516",
+                "kobashinG",
+                "seit", "kei_i_t",
+                "furusin_oriver" };
 
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
