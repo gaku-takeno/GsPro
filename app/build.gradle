@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        applicationId "pro.gs.com.lessonappgspro"
+        applicationId "pro.gs.com.quizgs"
         minSdkVersion 21
         targetSdkVersion 23
         versionCode 1
