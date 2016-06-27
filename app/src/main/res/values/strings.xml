@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LessonAppGsPro</string>
+    <string name="listView">listView</string>
+    <string name="recyclerView">recyclerView</string>
+
+
+</resources>
+
