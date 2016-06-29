@@ -15,7 +15,7 @@ public class AnswerActivity extends AppCompatActivity {
 
         final Intent intent = getIntent();
         int result = intent.getIntExtra("result",0);
-        int step = intent.getIntExtra("step",0);
+        int currentQuestionNumber = intent.getIntExtra("currentQuestionNumber",0);
 
         TextView backView = (TextView) findViewById(R.id.back);
         TextView answerView = (TextView) findViewById(R.id.answer);
@@ -29,7 +29,8 @@ public class AnswerActivity extends AppCompatActivity {
         }
         answerView.setText(answer);
 
-        if (step == 2) {
+        //最後のクイズだった場合、戻るボタンのテキストを変更
+        if (currentQuestionNumber == Constants.LAST_QUESTION) {
             backView.setText("結果画面へ行く");
         }
 
@@ -37,6 +38,10 @@ public class AnswerActivity extends AppCompatActivity {
             backView.setOnClickListener(
                     new View.OnClickListener() {
                         public void onClick(View v) {
+
+                            //QuizActivityに戻り、且つonActivityResultの
+                            //switch (requestCode) {case Constants.REQUEST_CODE:
+                            //の箇所にコールバックさせる
                             setResult(RESULT_OK, intent);
                             finish();
                         }
