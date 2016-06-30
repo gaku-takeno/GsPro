@@ -100,8 +100,10 @@ public class QuizActivity extends AppCompatActivity {
     private void setSubmitAction () {
 
 
-        //送信ボタンを押した時のイベント
-        submit.setOnClickListener(
+        if (answer1.isChecked() || answer2.isChecked() || answer3.isChecked()) {
+
+            //送信ボタンを押した時のイベント
+            submit.setOnClickListener(
                 new View.OnClickListener() {
                     public void onClick(View v) {
 
@@ -142,7 +144,11 @@ public class QuizActivity extends AppCompatActivity {
                         setAnswer(quizList);
                     }
                 }
-        );
+            );
+
+
+        }
+
     }
 
 

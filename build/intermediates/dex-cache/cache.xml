@@ -2,25 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/LessonAppGsPro/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/LessonAppGsPro/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_c576f48ff1c7559916d74e34f39676617363b9ef/classes.dex" />
-    </item>
-    <item
         jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/LessonAppGsPro/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="de87945d4bd4cee14ed9f5d94f29eb8e0f8d6cca">
+        sha1="8e43a368c03bd9c77ed9778fb6e529019e9c62ae">
         <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/LessonAppGsPro/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_1367f1dc49c363f1f40b12ecf87ab1dd90d5f77c/classes.dex" />
-    </item>
-    <item
-        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/LessonAppGsPro/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/LessonAppGsPro/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_82025fe0b66f09ef5ff6d1925d4d3ee6093c602c/classes.dex" />
     </item>
     <item
         jar="/Users/takenogaku/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
@@ -40,7 +26,7 @@
         jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/LessonAppGsPro/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="9478131c1526d30658f7e7ec3c1e3f42def13ebd">
+        sha1="4f9d3f75987e8d0a5001f10f712365fb4a640bcd">
         <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/LessonAppGsPro/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_eb45da2b1ab5a1137e901bc2b37f09677f4d7daa/classes.dex" />
     </item>
     <item
@@ -56,6 +42,20 @@
         revision="23.0.3"
         sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
         <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/LessonAppGsPro/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_59a770a26892dde7a8af5e137cb08c2e1cd81dfa/classes.dex" />
+    </item>
+    <item
+        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/LessonAppGsPro/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/LessonAppGsPro/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_c576f48ff1c7559916d74e34f39676617363b9ef/classes.dex" />
+    </item>
+    <item
+        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/LessonAppGsPro/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/project/LessonAppGsPro/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_82025fe0b66f09ef5ff6d1925d4d3ee6093c602c/classes.dex" />
     </item>
 
 </items>
