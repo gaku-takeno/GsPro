@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 
 
@@ -100,7 +102,6 @@ public class QuizActivity extends AppCompatActivity {
     private void setSubmitAction () {
 
 
-        if (answer1.isChecked() || answer2.isChecked() || answer3.isChecked()) {
 
             //送信ボタンを押した時のイベント
             submit.setOnClickListener(
@@ -121,33 +122,39 @@ public class QuizActivity extends AppCompatActivity {
                             yourAnswer = 3;
                         }
 
-                        //ユーザの解答をオブジェクトデータにセットする。
-                        quizList.setYourAnswer(yourAnswer);
 
-                        //ユーザーの解答と正解を比較して、一致していれば、正解とする。
-                        //0の場合 不正解 1の場合:正解
-                        if (yourAnswer == quizList.getCorrectAnswer()) {
-                            quizList.setIs_correct(1);
-                        } else {
-                            quizList.setIs_correct(0);
-                        }
+                        if (yourAnswer > 0) {
 
 
+                            //ユーザの解答をオブジェクトデータにセットする。
+                            quizList.setYourAnswer(yourAnswer);
 
-//                        //結果画面へ遷移
-//                        Intent intent = new Intent(getApplicationContext(), AnswerActivity.class);
-//                        intent.putExtra("result", quizList.getIs_correct());//0:正解 1:不正解
-//                        intent.putExtra("currentQuestionNumber", currentQuestionNumber);
-//                        startActivityForResult(intent, Constants.REQUEST_CODE);
+                            //ユーザーの解答と正解を比較して、一致していれば、正解とする。
+                            //0の場合 不正解 1の場合:正解
+                            if (yourAnswer == quizList.getCorrectAnswer()) {
+                                quizList.setIs_correct(1);
+                            } else {
+                                quizList.setIs_correct(0);
+                            }
+
+
+
+//                            //結果画面へ遷移
+//                            Intent intent = new Intent(getApplicationContext(), AnswerActivity.class);
+//                            intent.putExtra("result", quizList.getIs_correct());//0:正解 1:不正解
+//                              intent.putExtra("currentQuestionNumber", currentQuestionNumber);
+//                         startActivityForResult(intent, Constants.REQUEST_CODE);
 //                        currentQuestionNumber++;
 
-                        setAnswer(quizList);
+                            setAnswer(quizList);
+
+
+                        }
+
                     }
                 }
             );
 
-
-        }
 
     }
 
