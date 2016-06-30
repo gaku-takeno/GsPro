@@ -18,23 +18,26 @@ public class RecyclerViewActivity extends AppCompatActivity {
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.mylist);
         ArrayList<CustomDataObject> customDataObjectArrayList = new ArrayList<>();
 
+        //リスト一つ分のデータオブジェクトを作成し、配列オブジェクトのArrayList(customDataObjectArrayList)に追加している。
         CustomDataObject customDataObject = new CustomDataObject();
         customDataObject.setName("東京都");
         customDataObject.setImageId(R.drawable.tokyo);
         customDataObjectArrayList.add(customDataObject);
 
 
+        //リスト一つ分のデータオブジェクトを作成し、配列オブジェクトのArrayList(customDataObjectArrayList)に追加している。
         CustomDataObject customDataObject2 = new CustomDataObject();
-        customDataObject2.setName("福岡");
+        customDataObject2.setName("福岡県");
         customDataObject2.setImageId(R.drawable.fukuoka);
         customDataObjectArrayList.add(customDataObject2);
 
+        //リスト一つ分のデータオブジェクトを作成し、配列オブジェクトのArrayList(customDataObjectArrayList)に追加している。
         CustomDataObject customDataObject3 = new CustomDataObject();
         customDataObject3.setName("大阪");
         customDataObject3.setImageId(R.drawable.oosaka);
         customDataObjectArrayList.add(customDataObject3);
 
-
+        //アダプタークラスの引数にリスト一つ分のデータオブジェクトの配列(customDataObjectArrayList)を引数にいれている。
         RecyclerAdapter customAdapater = new RecyclerAdapter(customDataObjectArrayList,this);
         recyclerView.setAdapter(customAdapater);
 
