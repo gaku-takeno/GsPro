@@ -44,6 +44,7 @@ public class AnswerActivity extends AppCompatActivity {
                             //の箇所にコールバックさせる
                             setResult(RESULT_OK, intent);
                             finish();
+
                         }
                     }
             );

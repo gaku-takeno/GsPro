@@ -8,7 +8,7 @@ public class Constants {
     //定数を定義する
     public static final int REQUEST_CODE = 129;
 
-    public static final int LAST_QUESTION = 2;
+    public static final int LAST_QUESTION = 3;
 
 
 }

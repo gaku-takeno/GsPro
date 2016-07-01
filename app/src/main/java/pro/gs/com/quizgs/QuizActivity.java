@@ -85,12 +85,20 @@ public class QuizActivity extends AppCompatActivity {
         questionsArrayList.add(quizList2);
 
         QuizList quizList3 = new QuizList();
-        quizList3.setQuestion("栗林さんの趣味は？");
+        quizList3.setQuestion("後藤さんの趣味は？");
         quizList3.setChoice1("プログラミング");
         quizList3.setChoice2("俳句");
         quizList3.setChoice3("音楽");
         quizList3.setCorrectAnswer(3);//この問題の正解を指定
         questionsArrayList.add(quizList3);
+
+        QuizList quizList4 = new QuizList();
+        quizList4.setQuestion("石井さんの趣味は？");
+        quizList4.setChoice1("野球");
+        quizList4.setChoice2("サッカー");
+        quizList4.setChoice3("旅行");
+        quizList4.setCorrectAnswer(2);//この問題の正解を指定
+        questionsArrayList.add(quizList4);
 
 
     }
@@ -210,6 +218,7 @@ public class QuizActivity extends AppCompatActivity {
                     if (currentQuestionNumber > Constants.LAST_QUESTION) {
                         Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
                         intent.putExtra("questionsArrayList", questionsArrayList);
+                        intent.putExtra("ggg","今日!");
                         startActivity(intent);
                         finish();
 
