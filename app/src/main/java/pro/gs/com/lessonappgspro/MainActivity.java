@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
         MainActivity mainActivity = this;//キャストなし thisは元々 MainActivity
 
-        mainActivity = (MainActivity) getApplicationContext();//ContextからMainActivityへダウンキャスト
+        mainActivity = (MainActivity) context;//ContextからMainActivityへダウンキャスト
 
 //        final  MainActivity act = this;
 
