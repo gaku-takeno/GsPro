@@ -1,4 +1,4 @@
-package pro.gs.com.gspro;
+package pro.gs.com.lesson1gsmylayout;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
