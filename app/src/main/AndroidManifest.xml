@@ -8,17 +8,16 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="pro.gs.com.lessonappgspro.MainActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="pro.gs.com.lessonappgspro.ListViewActivity"></activity>
-        <activity android:name="pro.gs.com.lessonappgspro.RecyclerViewActivity"></activity>
-
+        <activity android:name=".ListViewActivity" />
+        <activity android:name=".RecyclerViewActivity" />
+        <activity android:name=".SubActivity"></activity>
     </application>
 
 </manifest>

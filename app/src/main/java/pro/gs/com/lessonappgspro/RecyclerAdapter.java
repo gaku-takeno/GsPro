@@ -1,13 +1,14 @@
 package pro.gs.com.lessonappgspro;
 
-
-
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -42,7 +43,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter {
         View view = LayoutInflater.from(context).inflate(R.layout.customlistview, parent, false);
 
         //viewのホルダークラスのオブジェクトを作成する。
-        return new ViewHolder(view, context);
+        return new ViewHolder(view);
 
     }
 
@@ -59,10 +60,37 @@ public class RecyclerAdapter extends RecyclerView.Adapter {
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
 
         ViewHolder holderView = (ViewHolder) holder;
-        //現在、画面に現れたデータを得る
+
         CustomDataObject item = my_List.get(position);
         holderView.name.setText(item.getName());
         holderView.image.setImageResource(item.getImageId());
+//        holderView.age.setText(String.valueOf(item.getAge()));
+        holderView.age.setText(Integer.toString(item.getAge()));
+
+
+        String sexTxt;
+        ////0 女性 1:男性
+        if (item.getSex() ==  0) {
+            sexTxt = "女";
+            //テキストの色を変える。
+            holderView.name.setTextColor(Color.RED);
+        } else {
+            sexTxt = "男";
+            //テキストの色を変える。
+            holderView.name.setTextColor(Color.BLUE);
+        }
+        holderView.sex.setText(sexTxt);
+
+        final String name = item.getName();
+
+        //リストをタップするとその詳細画面へ遷移する。
+        holderView.box.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(context.getApplicationContext(),SubActivity.class);
+                intent.putExtra("name",name);
+                context.startActivity(intent);
+            }
+        });
 
     }
 
@@ -73,19 +101,28 @@ public class RecyclerAdapter extends RecyclerView.Adapter {
      */
     @Override
     public int getItemCount() {
-        return this.my_List.size();
+        return my_List.size();
     }
 
 
     // 毎回findViewByIdをしなくてよくし、高速化に使用するholderクラス
     private static class ViewHolder extends RecyclerView.ViewHolder {
+
+        private LinearLayout box;
         private TextView name;
         private ImageView image;
-        private ViewHolder(View v,Context context) {
+        private TextView age;
+        private TextView sex;
+
+        private ViewHolder(View v) {
             super(v);
             // CustomDataのデータをViewの各Widgetにセットする
+            box = (LinearLayout) v.findViewById(R.id.box);
             name = (TextView) v.findViewById(R.id.name);
             image = (ImageView) v.findViewById(R.id.image);
+            age = (TextView) v.findViewById(R.id.age);
+            sex = (TextView) v.findViewById(R.id.sex);
+
 
         }
 

@@ -44,71 +44,9 @@ public class MainActivity extends AppCompatActivity {
             });
         }
 
+
     }
 
-//    private void jsonParse () {
 
-
-//        String url = "http://nofiction.deca.jp/cities.json";
-
-//        String st = "{'pinpointLocations' : [" +
-//                "{'link' : 'http://weather.livedoor.com/area/forecast/4044700','name' : '筑前町', 'icon' : 'http://nofiction.deca.jp/images/icon_11.jpg'}," +
-//                "{'link' : 'http://weather.livedoor.com/area/forecast/4044800','name' : '東峰村', 'icon' : 'http://nofiction.deca.jp/images/icon_12.jpg'}" +
-//                "]}";
-
-
-
-//        if (response != null) {
-//            try {
-//                JSONObject responseJsonObjec = new JSONObject(response);
-//                loadData(responseJsonObjec, isFirstLoading);
-//                loading = false;
-//
-//            } catch (JSONException e) {
-//                // TODO 自動生成された catch ブロック
-//                e.printStackTrace();
-//
-//            }
-//        }
-
-
-//    }
-
-
-//
-//    private void loadData (JSONObject response) {
-//
-//        try {
-//            JSONArray pinpointLocations = response.getJSONArray("pinpointLocations");
-//
-//            for (int c = 0; c<pinpointLocations.length(); c++) {
-//
-//                JSONObject v1 = (JSONObject) pinpointLocations.get(c);
-//                String link = v1.getString("link");
-//                String name = v1.getString("name");
-//                String icon = v1.getString("icon");
-//                Log.d("hello_name",name);
-//                //cityCodeを取得する
-//                String[] linkArg = link.split("/", 0);
-//                int index = linkArg.length-1;
-//                int cityCode = Integer.parseInt(linkArg[index]);
-//
-////                CustomDataObject customDataObject = new CustomDataObject();
-////                customDataObject.setName(name);
-////                customDataObject.setLink(link);
-////                customDataObject.setIcon(icon);
-////                customDataObject.setCityCode(cityCode);
-////                customDataObjectArrayList.add(customDataObject);
-//
-//            }
-//
-//
-//
-//        } catch (JSONException e) {
-//            e.printStackTrace();
-//        }
-//
-//
-//    }
 
 }
