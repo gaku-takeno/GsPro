@@ -78,7 +78,7 @@ public class QuizActivity extends AppCompatActivity {
 
         QuizList quizList2 = new QuizList();
         quizList2.setQuestion("東京の人口は？");
-        quizList2.setChoice1("1億3000万人");
+        quizList2.setChoice1("1億5000万人");
         quizList2.setChoice2("1億9000万人");
         quizList2.setChoice3("5000万人");
         quizList2.setCorrectAnswer(2);//この問題の正解を指定
