@@ -12,6 +12,8 @@ import com.android.volley.toolbox.ImageLoader;
  */
 public class BitmapCache implements ImageLoader.ImageCache {
     private LruCache<String, Bitmap> mCache;
+
+
     public BitmapCache() {
 
         /*メモリーの最大容量を設定。
@@ -22,7 +24,7 @@ public class BitmapCache implements ImageLoader.ImageCache {
         それは以下のサイトを参考にしてください。
         http://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q1413226859
         */
-        int maxSize = 3 * 1024 * 1024;
+        int maxSize = 40 * 1024 * 1024;
         mCache = new LruCache<String, Bitmap>(maxSize) {
             @Override
             protected int sizeOf(String key, Bitmap value) {

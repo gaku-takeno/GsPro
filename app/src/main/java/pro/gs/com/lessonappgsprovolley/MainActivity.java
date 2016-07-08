@@ -19,6 +19,8 @@ import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
@@ -39,16 +41,12 @@ public class MainActivity extends AppCompatActivity {
         //volleyを使ってインタネット上のデータをロードする。
         loadDataByVolley();
 
-
-
         //volleyを使ってインタネット上の画像を表示する。
         displayImageByVolley();
 
 
         //リスト画面へのリンクテキストを表示する。
         displayListView();
-
-
 
 
 
@@ -76,9 +74,8 @@ public class MainActivity extends AppCompatActivity {
     private void loadDataByVolley () {
 
         // 東京都の天気情報
-//        String api_url = "http://weather.livedoor.com/forecast/webservice/json/v1?city=130010";
-        String api_url = "http://nofiction.deca.jp/cities.json";
-
+        String api_url = "http://weather.livedoor.com/forecast/webservice/json/v1?city=130010";
+//        String api_url = "http://nofiction.deca.jp/cities.json";
 
         //パーサー
         //http://www.ctrlshift.net/jsonprettyprinter/
@@ -90,7 +87,29 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         // JSONObjectのパース、List、Viewへの追加等
-                        Log.d("hello_res", String.valueOf(response));
+
+                        try {
+                            JSONArray pinpointLocations = response.getJSONArray("pinpointLocations");
+
+                            for (int c = 0; c<pinpointLocations.length(); c++) {
+
+                                JSONObject v1 = (JSONObject) pinpointLocations.get(c);
+                                String link = v1.getString("link");
+                                String name = v1.getString("name");
+
+                                Log.d("gs_api",name);
+                                //cityCodeを取得する
+                                String[] linkArg = link.split("/", 0);
+                                int index = linkArg.length-1;
+                                int cityCode = Integer.parseInt(linkArg[index]);
+
+
+                            }
+
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
 
 //
 //                        {"pinpointLocations" : [
@@ -124,29 +143,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-//                        try {
-//                            JSONArray pinpointLocations = response.getJSONArray("pinpointLocations");
 //
-//                            for (int c = 0; c<pinpointLocations.length(); c++) {
-//
-//                                JSONObject v1 = (JSONObject) pinpointLocations.get(c);
-//                                String link = v1.getString("link");
-//                                String name = v1.getString("name");
-//                                String icon = v1.getString("icon");
-//
-//                                Log.d("gs_api",name);
-//                                //cityCodeを取得する
-//                                String[] linkArg = link.split("/", 0);
-//                                int index = linkArg.length-1;
-//                                int cityCode = Integer.parseInt(linkArg[index]);
-//
-//
-//                            }
-//
-//
-//                        } catch (JSONException e) {
-//                            e.printStackTrace();
-//                        }
 
                     }
                 },
@@ -160,6 +157,15 @@ public class MainActivity extends AppCompatActivity {
                 });
 
         mQueue.add(jsonRequest);
+    }
+
+
+    private void showData (String res) {
+
+
+
+
+
     }
 
 
@@ -184,7 +190,9 @@ public class MainActivity extends AppCompatActivity {
 
         //リスナーとは：何らかの事象（イベント）が発生したときに起動されるよう対応付けられた関数
         //ネットワークから画像をロードする為のリスナーを取得する
-        ImageLoader.ImageListener listener = ImageLoader.getImageListener(imageView, android.R.drawable.ic_menu_rotate, android.R.drawable.ic_delete);
+        ImageLoader.ImageListener listener = ImageLoader.getImageListener(imageView,
+                android.R.drawable.ic_menu_rotate,
+                android.R.drawable.ic_delete);
 
         //キャッシュがあれば、キャッシュから、
         // キャッシュがなければ、ネットから画像をロードする。
@@ -202,6 +210,8 @@ public class MainActivity extends AppCompatActivity {
 
         TextView listView = (TextView) findViewById(R.id.listView);
         TextView recyclerView = (TextView) findViewById(R.id.recyclerView);
+        TextView recyclerViewWeather = (TextView) findViewById(R.id.recyclerViewWeather);
+
 
 
         if (listView != null) {
@@ -226,6 +236,19 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+
+        if (recyclerViewWeather != null) {
+            recyclerViewWeather.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+
+                    //Volleyを使ってネットからSONデータをロードして、recyclerviewに表示させる。
+                    Intent intent = new Intent(getApplicationContext(), RecyclerViewWeatherActivity.class);
+                    startActivity(intent);
+                }
+            });
+        }
+
+
 
     }
 

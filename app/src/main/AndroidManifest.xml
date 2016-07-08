@@ -19,7 +19,8 @@
         </activity>
         <activity android:name=".ListViewActivity" />
         <activity android:name=".RecyclerViewActivity" />
-        <activity android:name=".SubActivity"></activity>
+        <activity android:name=".SubActivity" />
+        <activity android:name=".RecyclerViewWeatherActivity"></activity>
     </application>
 
 </manifest>

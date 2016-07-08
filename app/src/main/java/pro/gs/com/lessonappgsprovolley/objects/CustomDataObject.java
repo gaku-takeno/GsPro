@@ -1,11 +1,12 @@
 package pro.gs.com.lessonappgsprovolley.objects;
 
 
+import java.io.Serializable;
 
 /**
  * Created by takenogaku on 2016/05/05.
  */
-public class CustomDataObject {
+public class CustomDataObject implements Serializable {
     private String link;
     private int cityCode;
     private String name;
