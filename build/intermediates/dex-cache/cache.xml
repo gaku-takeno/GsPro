@@ -2,74 +2,60 @@
 <items version="2" >
 
     <item
-        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson7/TabLayoutViewPager/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson1/Lesson1GsMyLayout/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
-        revision="24.0.0"
+        revision="23.0.3"
+        sha1="2c4c343c1b0be1f2ff9a1b53022fd0d4f803f0bb">
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson1/Lesson1GsMyLayout/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_e1e1cd1a8789300e76af6b43c635315063e27783/classes.dex" />
+    </item>
+    <item
+        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson1/Lesson1GsMyLayout/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson1/Lesson1GsMyLayout/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_fdb5662965ded9d31923712d5d90590b0be97c38/classes.dex" />
+    </item>
+    <item
+        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson1/Lesson1GsMyLayout/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
         sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
-        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson7/TabLayoutViewPager/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_9fbac964ed0575647d640d5371b1d703d89138c1/classes.dex" />
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson1/Lesson1GsMyLayout/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_0d39861675796fc32c367db74b55e0b57481ca8c/classes.dex" />
     </item>
     <item
-        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson7/TabLayoutViewPager/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.4.0/jars/classes.jar"
+        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson1/Lesson1GsMyLayout/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
-        revision="24.0.0"
-        sha1="ec75036c3c52e451d0cde50a5aedaf5fd32354a0">
-        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson7/TabLayoutViewPager/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.4.0_f6962319d81eb1a0821f636618c1a4c57e28fe8d/classes.dex" />
+        revision="23.0.3"
+        sha1="f9230591402a31c614611be8fd8a27aef82fa891">
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson1/Lesson1GsMyLayout/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_38f3c0627a5eb910d3408e19465089b907bfb0ee/classes.dex" />
     </item>
     <item
-        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson7/TabLayoutViewPager/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson1/Lesson1GsMyLayout/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
         jumboMode="true"
-        revision="24.0.0"
-        sha1="f091d71aee5907ec1553eb15c528d7aa9ed46a69">
-        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson7/TabLayoutViewPager/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_f451987814aaeffd1361d552e3f4661cb9992177/classes.dex" />
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson1/Lesson1GsMyLayout/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.4.0_19d03d09f05105db445c6e4af4d9b16b4bf3e6ce/classes.dex" />
     </item>
     <item
         jar="/Users/takenogaku/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
         jumboMode="true"
-        revision="24.0.0"
+        revision="23.0.3"
         sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
-        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson7/TabLayoutViewPager/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_a19e272300223424f6aa65f6bd5a1e10d48aa996/classes.dex" />
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson1/Lesson1GsMyLayout/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_a19e272300223424f6aa65f6bd5a1e10d48aa996/classes.dex" />
     </item>
     <item
-        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson7/TabLayoutViewPager/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson1/Lesson1GsMyLayout/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
         jumboMode="true"
-        revision="24.0.0"
-        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
-        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson7/TabLayoutViewPager/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_036719b4221236aa6b18af507a80b48ea3ed8ee6/classes.dex" />
-    </item>
-    <item
-        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson7/TabLayoutViewPager/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        revision="24.0.0"
-        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
-        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson7/TabLayoutViewPager/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_ef8b3fd42b77a8e6fbdd5c96c2a4cc0b781d52cf/classes.dex" />
-    </item>
-    <item
-        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson7/TabLayoutViewPager/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        revision="24.0.0"
-        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
-        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson7/TabLayoutViewPager/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.4.0_067dc12b7a13c7918aaa1bfb9b1559f3e2f8af9b/classes.dex" />
-    </item>
-    <item
-        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson7/TabLayoutViewPager/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        revision="24.0.0"
+        revision="23.0.3"
         sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
-        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson7/TabLayoutViewPager/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_a7611887d27c329cf732470375518259c9df0c41/classes.dex" />
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson1/Lesson1GsMyLayout/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_f94bec47ffc4826e74e1c8be78e779100c806c6e/classes.dex" />
     </item>
     <item
-        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson7/TabLayoutViewPager/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson1/Lesson1GsMyLayout/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
         jumboMode="true"
-        revision="24.0.0"
-        sha1="aefbef3af6c8584a456a206750db3c37b2ad965f">
-        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson7/TabLayoutViewPager/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_a8d53a6007387d1a1227c31f6a3e96cd63c1c47b/classes.dex" />
-    </item>
-    <item
-        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson7/TabLayoutViewPager/app/build/intermediates/exploded-aar/com.android.support/design/23.4.0/jars/classes.jar"
-        jumboMode="true"
-        revision="24.0.0"
-        sha1="5326d9a850d491714fef8cbfaa9ea3416f0bf0d2">
-        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson7/TabLayoutViewPager/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.4.0_b037173c22a54887eaf93e225294e7c993e6881c/classes.dex" />
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson1/Lesson1GsMyLayout/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_ed2de10cd4e60baa3813b076fc907e68bc5ba1bd/classes.dex" />
     </item>
 
 </items>
