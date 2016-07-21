@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">TabLayoutViewPager</string>
+    <string name="app_name">CameraGalleryImage</string>
+
+    <string name="library">ライブラリー</string>
+    <string name="camera">カメラ</string>
+
 </resources>
