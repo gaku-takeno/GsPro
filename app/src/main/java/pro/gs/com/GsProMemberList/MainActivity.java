@@ -1,8 +1,14 @@
 package pro.gs.com.GsProMemberList;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
+import android.net.Uri;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -52,6 +58,14 @@ public class MainActivity extends AppCompatActivity {
     private LoginButton loginButton;
     private SharedPreferences data;
 
+    /**
+     * Activityが作成される時(MainActivityがオブジェクト化された時)に
+     * 必ず一番初めに実行されるメソッド
+     * MainActivityを開いてる時に、一度他のアプリを開いた後、再びMainActivityをアクティブにした場合は、
+     * onCreateは実行されない。
+     * MainActivityがバックグラウンドに置かれている状態から、フォアグランドに戻っているので、
+     * MainActivityが作成されている訳ではない。
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
         TextView mypageBtn = (TextView)findViewById(R.id.mypageBtn);
 
+//        mypageBtn.setText(2);
         callbackManager = CallbackManager.Factory.create();
         loginButton = (LoginButton) findViewById(R.id.login_btn_facebook);
 
@@ -84,8 +99,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        Log.d("gspro_activity_life","onCreate");
 
     }
+
+
 
 
     /**
@@ -263,8 +281,6 @@ public class MainActivity extends AppCompatActivity {
 
             SharedPreferences.Editor editor = data.edit();
             editor.putString("sns_user_id", object.getString("id"));
-            editor.putString("name", object.getString("name"));
-            editor.putInt("sex", sex);
             editor.apply();
 
         } catch (JSONException e) {
@@ -282,4 +298,72 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("gspro_activity_life","onStart");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("gspro_activity_life","onPause");
+    }
+
+
+    /**
+     * 画面がアクティブになる度に必ず、実行されるメソッドなので、
+     * 画面がアクティブになる度に必ず実行したい処理がある場合に使う。
+     * 例えば、画面が前面に出る度(フォアグランド)に、最新のデータを取り出し直したい場合など。
+     */
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("gspro_activity_life","onResume");
+
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("gspro_activity_life","onRestart");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("gspro_activity_life","onDestroy");
+
+
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        Log.d("gspro_activity_life","onStop");
+    }
+
+    public void onBackPressed() {
+
+        AlertDialog.Builder ad = new AlertDialog.Builder(this);
+        ad.create();
+
+        ad.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {
+                finish();
+            }
+        });
+
+        ad.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int whichButton) {}
+        });
+
+        ad.setMessage("onDestroy");
+        ad.show();
+
+        //以下をコメントアウトすると戻るボタンが無効になる。
+//        super.onBackPressed();
+
+    }
 }

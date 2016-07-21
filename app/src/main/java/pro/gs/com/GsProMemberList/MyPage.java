@@ -1,11 +1,13 @@
 package pro.gs.com.GsProMemberList;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -47,9 +49,9 @@ public class MyPage extends AppCompatActivity {
 
         SharedPreferences data = getSharedPreferences("DataSave", Context.MODE_PRIVATE);
         String sns_user_id = data.getString("sns_user_id","");
-        String name = data.getString("name","");
+//        String name = data.getString("name","");
 
-        Log.d("gs_my",sns_user_id+":"+name);
+        Log.d("gs_my",sns_user_id+":");
 
 
     }
@@ -82,6 +84,51 @@ public class MyPage extends AppCompatActivity {
         // キャッシュがなければ、ネットから画像をロードする。
         //画像のurlパスをキャッシュデータを格納する配列のキーとなる。
         ilImage.get(imageUrl, listener);
+
+
+
+        Button listBtn = (Button) findViewById(R.id.listBtn);
+        Button editBtn = (Button) findViewById(R.id.editBtn);
+
+        //メンバーリスト画面を画面遷移する
+        if (listBtn != null) {
+            listBtn.setOnClickListener(new View.OnClickListener() {
+
+                /**
+                 * Called when a view has been clicked.
+                 *
+                 * @param v The view that was clicked.
+                 */
+                @Override
+                public void onClick(View v) {
+
+                    Intent intent = new Intent(getApplicationContext(), MemberListActivity.class);
+                    startActivity(intent);
+
+                }
+            });
+        }
+
+
+        //プロフィール編集画面を画面遷移する
+        if (editBtn != null) {
+            editBtn.setOnClickListener(new View.OnClickListener() {
+
+                /**
+                 * Called when a view has been clicked.
+                 *
+                 * @param v The view that was clicked.
+                 */
+                @Override
+                public void onClick(View v) {
+
+//                    Intent intent = new Intent(getApplicationContext(), ProfileEditActivity.class);
+//                    startActivity(intent);
+
+                }
+            });
+        }
+
 
     }
 

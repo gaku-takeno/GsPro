@@ -5,7 +5,7 @@ android {
     buildToolsVersion "24.0.0"
 
     defaultConfig {
-        applicationId "pro.gs.com.fbfirebase"
+        applicationId "pro.gs.com.GsProMemberList"
         minSdkVersion 21
         targetSdkVersion 23
         versionCode 1
@@ -25,4 +25,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.facebook.android:facebook-android-sdk:[4,5)'
     compile 'com.mcxiaoke.volley:library:1.+'
+    compile 'com.android.support:recyclerview-v7:+'
 }

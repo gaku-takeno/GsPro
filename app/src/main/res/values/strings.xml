@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">GsProMemberList</string>
     <string name="facebook_app_id">1148521601877118</string>
+    <string name="member_list_btn">メンバーリストへ</string>
+    <string name="edit_profile_btn">プロフィール編集</string>
+
 </resources>

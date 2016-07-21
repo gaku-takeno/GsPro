@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson6/GsMemberList/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="2318591d94feedde609a730839d05b2f95c12dad">
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson6/GsMemberList/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_c558e7a9285c4406de35cfeda4ab58af45495757/classes.dex" />
+    </item>
+
+</items>
