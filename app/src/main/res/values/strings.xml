@@ -1,3 +1,22 @@
 <resources>
-    <string name="app_name">TabLayoutViewPager</string>
+    <string name="app_name">GsProMemberList</string>
+    <string name="facebook_app_id">1148521601877118</string>
+    <string name="member_list_btn">メンバーリストへ</string>
+    <string name="edit_profile_btn">プロフィール編集</string>
+
+
+    <string name="edit_name_field">名前</string>
+    <string name="edit_sex_field">性別</string>
+    <string name="edit_age_field">年齢</string>
+    <string name="edit_message_field">コメント</string>
+
+
+    <string name="hint_name_field">名前を入れてください</string>
+    <string name="hint_message_field">コメントを入れてください</string>
+    <string name="hint_age_field">年齢を入れてください</string>
+
+    <string name="submit">登録する</string>
+
+
+
 </resources>
