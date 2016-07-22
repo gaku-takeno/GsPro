@@ -3,12 +3,10 @@ package pro.gs.com.GsProMemberList;
 
 import java.io.Serializable;
 
-/**
- * Created by takenogaku on 2016/05/05.
- */
+
 public class CustomDataObject implements Serializable {
-    private String link;
-    private int cityCode;
+    private String message;
+    private int sex;
     private String name;
     private String icon;
 
@@ -24,6 +22,22 @@ public class CustomDataObject implements Serializable {
     }
     public String getIcon() {
         return this.icon;
+    }
+
+
+    public void setMessage (String message) {
+        this.message = message;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
+
+    public void setSex (int sex) {
+        this.sex = sex;
+    }
+    public int getSex() {
+        return this.sex;
     }
 
 

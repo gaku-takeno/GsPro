@@ -46,7 +46,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter {
         //現在、画面に現れたデータを得る
         CustomDataObject item = my_List.get(position);
         holderView.name.setText(item.getName());
-
+        holderView.message.setText(item.getMessage());
 
         // リクエストのキャンセル処理
         ImageLoader.ImageContainer imageContainer = (ImageLoader.ImageContainer)((ViewHolder) holder).icon.getTag();
@@ -74,13 +74,16 @@ public class RecyclerAdapter extends RecyclerView.Adapter {
     // 毎回findViewByIdをしなくてよくし、高速化に使用するholderクラス
     private static class ViewHolder extends RecyclerView.ViewHolder {
         private TextView name;
+        private TextView message;
         private ImageView icon;
 
         private ViewHolder(View v) {
             super(v);
             // CustomDataのデータをViewの各Widgetにセットする
             name = (TextView) v.findViewById(R.id.name);
+            message = (TextView) v.findViewById(R.id.message);
             icon = (ImageView) v.findViewById(R.id.icon);
+
         }
 
     }

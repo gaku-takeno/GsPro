@@ -56,7 +56,9 @@ public class MainActivity extends AppCompatActivity {
 
     private CallbackManager callbackManager;
     private LoginButton loginButton;
-    private SharedPreferences data;
+    private TextView mypageBtn;
+    private View.OnClickListener fbLoginListener = null;
+
 
     /**
      * Activityが作成される時(MainActivityがオブジェクト化された時)に
@@ -75,34 +77,61 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        TextView mypageBtn = (TextView)findViewById(R.id.mypageBtn);
-
-//        mypageBtn.setText(2);
         callbackManager = CallbackManager.Factory.create();
         loginButton = (LoginButton) findViewById(R.id.login_btn_facebook);
+
+        mypageBtn = (TextView) findViewById(R.id.mypageBtn);
 
         //FB APIにログインする。
         fbLogin();
 
+        //「Mypageへ」ボタンをタップした時の処理
+        tapMypageBtn();
 
-        data = getSharedPreferences("DataSave", Context.MODE_PRIVATE);
 
-        // マイペースへ画面遷移する
-        if (mypageBtn != null) {
-            mypageBtn.setOnClickListener(new View.OnClickListener() {
+
+
+    }
+
+
+    /**
+     * 「Mypageへ」ボタンをタップした時の処理
+     */
+    private void tapMypageBtn() {
+
+
+        Profile fbProf = Profile.getCurrentProfile();
+
+        // FBログイン中
+        if(fbProf != null) {
+
+            fbLoginListener = new View.OnClickListener() {
                 public void onClick(View v) {
                     Intent intent = new Intent(getApplicationContext(), MyPage.class);
                     startActivity(intent);
                 }
-            });
+            };
+
+
+        } else {
+            // FBログアウト中
+            fbLoginListener = new View.OnClickListener() {
+                public void onClick(View v) {
+                    Toast toast = Toast.makeText(getApplicationContext(), Language.IS_LOGOUT, Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER, 0, 0);
+                    toast.show();
+                }
+            };
+
+        }
+
+        // マイページへボタンにタップリスナーをセットする。
+        if (mypageBtn != null) {
+            mypageBtn.setOnClickListener(fbLoginListener);
         }
 
 
-
-        Log.d("gspro_activity_life","onCreate");
-
     }
-
 
 
 
@@ -129,10 +158,27 @@ public class MainActivity extends AppCompatActivity {
                                     //FB APIで取得したprofileデータをサーバー側に追加する。
                                     addMember(object);
 
+                                    //FB profileをSharedPreferenceオブジェクトに保存する
                                     addSharedPref(object);
+
+
+                                    //Mypageへボタンのタップリスナーを書き換える。
+                                    // FBログアウト中の挙動に変える
+                                    fbLoginListener = new View.OnClickListener() {
+                                        public void onClick(View v) {
+                                            Intent intent = new Intent(getApplicationContext(), MyPage.class);
+                                            startActivity(intent);
+                                        }
+                                    };
+                                    // マイページへボタンにタップリスナーをセットする。
+                                    if (mypageBtn != null) {
+                                        mypageBtn.setOnClickListener(fbLoginListener);
+                                    }
+
 
                                 }
                             });
+
                     Bundle parameters = new Bundle();
                     parameters.putString("fields", "id,name,gender");
                     request.setParameters(parameters);
@@ -150,6 +196,7 @@ public class MainActivity extends AppCompatActivity {
             });
 
 
+            //ログイン/ログアウト状態を変更した場合の処理
             AccessTokenTracker accessTokenTracker = new AccessTokenTracker() {
                 @Override
                 protected void onCurrentAccessTokenChanged(AccessToken oldAccessToken,
@@ -169,12 +216,30 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
+    /**
+     * ログアウト処理をした場合
+     */
     private void loggedout () {
 
         Toast toast = Toast.makeText(getApplicationContext(), Language.COMPLETE_LOGGEDOUT, Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER, 0, 0);
         toast.show();
+
+        //Mypageへボタンのタップリスナーを書き換える。
+        // FBログアウト中の挙動に変える
+        fbLoginListener = new View.OnClickListener() {
+            public void onClick(View v) {
+                Toast toast = Toast.makeText(getApplicationContext(), Language.IS_LOGOUT, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER_VERTICAL | Gravity.CENTER, 0, 0);
+                toast.show();
+            }
+        };
+
+        // マイページへボタンにタップリスナーをセットする。
+        if (mypageBtn != null) {
+            mypageBtn.setOnClickListener(fbLoginListener);
+        }
+
 
     }
 
@@ -272,13 +337,10 @@ public class MainActivity extends AppCompatActivity {
      */
     private void addSharedPref (JSONObject object) {
 
+        //SharedPreferencesオブジェクトを取り出す
+        SharedPreferences data = getSharedPreferences("DataSave", Context.MODE_PRIVATE);
+
         try {
-
-            int sex = 0;
-            if (object.getString("gender").equals("male")) {
-                sex = 1;
-            }
-
             SharedPreferences.Editor editor = data.edit();
             editor.putString("sns_user_id", object.getString("id"));
             editor.apply();

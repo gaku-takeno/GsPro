@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -80,11 +81,14 @@ public class MemberListActivity extends AppCompatActivity {
                 JSONObject v1 = (JSONObject) pinpointLocations.get(c);
                 String sns_user_id = v1.getString("sns_user_id");
                 String name = v1.getString("name");
+                String message = v1.getString("message");
+
                 String icon = "http://graph.facebook.com/" + sns_user_id + "/picture?type=large";
 
                 CustomDataObject customDataObject = new CustomDataObject();
                 customDataObject.setName(name);
                 customDataObject.setIcon(icon);
+                customDataObject.setMessage(message);
                 customDataObjectArrayList.add(customDataObject);
 
             }
