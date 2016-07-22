@@ -43,6 +43,8 @@ public class MyPage extends AppCompatActivity {
 
         setContentView(R.layout.activity_my_page);
 
+        //VolleyのRequestQueueオブジェクト
+        //volleyを使ったHTTP通信の基礎オブジェクト
         mQueue = Volley.newRequestQueue(this);
 
         //SharedPreferencesからFBのユーザーIDを取得する

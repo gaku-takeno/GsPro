@@ -22,6 +22,7 @@ import java.util.ArrayList;
 
 public class MemberListActivity extends AppCompatActivity {
 
+    //VolleyのRequestQueueオブジェクト
     private RequestQueue mQueue;
 
     @Override
@@ -29,6 +30,8 @@ public class MemberListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_member_list);
 
+        //VolleyのRequestQueueオブジェクト
+        //volleyを使ったHTTP通信の基礎オブジェクト
         mQueue = Volley.newRequestQueue(this);
         volleyGet(Constants.LIST_GSPRO_MEMBER);
 

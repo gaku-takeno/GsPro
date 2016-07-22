@@ -53,7 +53,10 @@ public class ProfileEditActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_edit);
 
+        //VolleyのRequestQueueオブジェクト
+        //volleyを使ったHTTP通信の基礎オブジェクト
         mQueue = Volley.newRequestQueue(this);
+
         submitView = (Button)findViewById(R.id.submit_btn);
         nameView = (EditText) findViewById(R.id.edit_name);
         messageView = (EditText) findViewById(R.id.edit_message);
