@@ -1,7 +1,3 @@
 <resources>
-    <string name="app_name">CameraGalleryImage</string>
-
-    <string name="library">ライブラリー</string>
-    <string name="camera">カメラ</string>
-
+    <string name="app_name">UniversalImageLoader</string>
 </resources>
