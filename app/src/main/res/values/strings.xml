@@ -1,7 +1,41 @@
 <resources>
-    <string name="app_name">CameraGalleryImage</string>
+    <string name="app_name">GsproLesson8</string>
 
-    <string name="library">ライブラリー</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello">ハロー Hello</string>
+    <string name="world">ワールド wordl</string>
+    <string name="address">住所</string>
+    <string name="email">EMAIL</string>
+    <string name="tel">090-0000-0000</string>
+    <string name="user_name1">織田信長</string>
+    <string name="user_name2">豊臣秀吉</string>
+    <string name="user_name3">徳川家康</string>
+    <string name="title_activity_edit_profile">プロフィール編集</string>
+    <string name="title_activity_new_profile">友達追加</string>
+    <string name="friends_list">友達リスト</string>
+
+
+    <string name="edit_name_field">名前</string>
+    <string name="edit_email_field">メールアドレス</string>
+    <string name="edit_address_field">住所</string>
+    <string name="edit_sex_field">性別</string>
+    <string name="edit_nation_field">国籍</string>
+
+    <string name="hint_name_field">名前を入れてください</string>
+    <string name="hint_email_field">メールアドレスを入れてください</string>
+    <string name="hint_address_field">住所を入れてください</string>
+    <string name="hint_sex_field">性別</string>
+    <string name="hint_nation_field">国籍を入れてください</string>
+
+    <string name="submit">登録する</string>
+
+
+    <string name="library">アルバム</string>
     <string name="camera">カメラ</string>
+    <string name="title_activity_my_list_view">MyListViewActivity</string>
+    <string name="icon">ユーザーアイコン</string>
+    <string name="title_activity_tab">TabActivity</string>
+
 
 </resources>

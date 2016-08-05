@@ -2,11 +2,74 @@
 <items version="2" >
 
     <item
-        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson7/CameraGalleryImage/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
+        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson8/SqliteDB/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/classes.jar"
+        jumboMode="false"
         revision="24.0.0"
-        sha1="6bcd6aecd18b011b0046b161b8e223777365db9c">
-        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson7/CameraGalleryImage/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_19a5a1f87bc5dd3046387d3cf77e4f8d7784ae12/classes.dex" />
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson8/SqliteDB/app/build/intermediates/pre-dexed/debug/classes-51c5198e226a10bf6c0442dbb5c1b40b6868d1ac.jar" />
+    </item>
+    <item
+        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/other/HelloTakeno/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/other/HelloTakeno/app/build/intermediates/pre-dexed/debug/classes-9dc15727f169cb24145b92f864b54ad687b9bdf4.jar" />
+    </item>
+    <item
+        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson8/SqliteDB/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson8/SqliteDB/app/build/intermediates/pre-dexed/debug/classes-d67ba426c0709f15daed231a24ea9b9f95d87911.jar" />
+    </item>
+    <item
+        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson8/SqliteDB/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson8/SqliteDB/app/build/intermediates/pre-dexed/debug/classes-e52d7a352bc9f5da766f7c692d7468fde1f6ce5d.jar" />
+    </item>
+    <item
+        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson8/SqliteDB/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/classes.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson8/SqliteDB/app/build/intermediates/pre-dexed/debug/classes-d87ce1abf486deaac5acb0a97c3b44e036018567.jar" />
+    </item>
+    <item
+        jar="/Users/takenogaku/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson8/SqliteDB/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0-a19e272300223424f6aa65f6bd5a1e10d48aa996.jar" />
+    </item>
+    <item
+        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson8/SqliteDB/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/libs/internal_impl-23.4.0.jar"
+        jumboMode="false"
+        revision="24.0.0"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/lesson8/SqliteDB/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0-725cd18bbf88691b2ad6376f5d3d374dc7f23d12.jar" />
+    </item>
+    <item
+        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/other/HelloTakeno/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/libs/internal_impl-22.1.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/other/HelloTakeno/app/build/intermediates/pre-dexed/debug/internal_impl-22.1.1-6e95c6302a10920d1ee9ba7cfa93853eeb1b8f48.jar" />
+    </item>
+    <item
+        jar="/Users/takenogaku/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.1.1/support-annotations-22.1.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/other/HelloTakeno/app/build/intermediates/pre-dexed/debug/support-annotations-22.1.1-28bf0541804ad052df9252d7678ac20af7c1b9c0.jar" />
+    </item>
+    <item
+        jar="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/other/HelloTakeno/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="/Users/takenogaku/Desktop/project_list/GsAccademy/GsPro/lessons/other/HelloTakeno/app/build/intermediates/pre-dexed/debug/classes-e2e2fa593570d2c9bc7e3ffa0b74d65af693a6e8.jar" />
     </item>
 
 </items>

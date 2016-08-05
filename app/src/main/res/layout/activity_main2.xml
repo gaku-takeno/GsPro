@@ -1,0 +1,114 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gspro.activity.MainActivity">
+
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        >
+
+        <!-- 上半分 start -->
+        <!-- 項目ID  -->
+        <RelativeLayout
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="3"
+            android:background="@color/black"
+            >
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/cover_icon"
+                />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/my_icon"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:scaleType="fitXY"
+                android:layout_margin="20dp"
+                android:background="@drawable/border"
+                />
+
+
+        </RelativeLayout>
+        <!-- 上半分 end -->
+
+
+
+        <!-- 下半分 start -->
+        <LinearLayout
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="2"
+            android:background="@color/black"
+            android:orientation="vertical"
+            >
+
+
+            <LinearLayout
+                android:layout_height="40dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:background="@color/Lavender"
+                >
+                <!-- この部分を埋めてください -->
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_height="40dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:background="@color/SandyBrown"
+                >
+                <!-- この部分を埋めてください -->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="40dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:background="@color/gray"
+                >
+                <!-- この部分を埋めてください -->
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_height="100dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:background="@color/Beige"
+                android:layout_marginTop="10dp"
+                >
+                <!-- この部分を埋めてください -->
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+        <!-- 下半分 end -->
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
